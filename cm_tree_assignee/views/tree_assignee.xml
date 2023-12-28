@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="project_task_view_tree_inherited" model="ir.ui.view">
+            <field name="name">project.task.view.tree.inherited</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_tree2"/>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="manager_id"/>
+                    <field name="issue_raised_by"/>
+                    <field name="issue_raiser_department_id"/>
+                    <field name="application"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

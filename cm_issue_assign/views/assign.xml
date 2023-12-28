@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="view_project_task_form_inherited" model="ir.ui.view">
+            <field name="name">project.task.form.inherited</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_form2"/>
+            <field name="arch" type="xml">
+                <field name="user_ids" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </field>
+                <field name="user_ids" position="after">
+                    <field name="manager_id"/>
+                </field>
+                <field name="project_id"/>
+            </field>
+        </record>
+    </data>
+</odoo>
+

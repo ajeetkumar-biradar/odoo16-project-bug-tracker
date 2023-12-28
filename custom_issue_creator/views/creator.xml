@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="view_partner_property_form" model="ir.ui.view">
+            <field name="name">project.task.form.inherited</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_form2"/>
+            <field name="arch" type="xml">
+                <header>
+                    <button name="send_email_to_creator" string="Send Email to Creator" type="object"
+                            class="oe_highlight" groups="project.group_project_manager"/>
+                </header>
+                <field name="tag_ids" position="after">
+                    <field name="department_id"/>
+                </field>
+                <field name="date_deadline"/>
+                <field name="tag_ids"/>
+            </field>
+        </record>
+    </data>
+</odoo>
+

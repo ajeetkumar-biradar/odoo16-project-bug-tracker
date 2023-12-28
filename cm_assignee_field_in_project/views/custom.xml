@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <record id="view_form_custom_project_task" model="ir.ui.view">
+            <field name="name">project.project.form.inherit</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.edit_project"/>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="before">
+                     <field name="assignee_ids" widget="many2many_tags" invisible="1"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>
